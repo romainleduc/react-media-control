@@ -1,0 +1,53 @@
+{
+  "name": "react-media-control",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "material-ui",
+    "media",
+    "control",
+    "audio",
+    "video"
+  ],
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "webpack": "webpack",
+    "dev": "npm run webpack -- --mode development --watch",
+    "build": "npm run webpack -- --mode production",
+    "build-types": "tsc -d --emitDeclarationOnly --outDir types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romainleduc/react-media-control.git"
+  },
+  "author": "Romain LEDUC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romainleduc/react-media-control/issues"
+  },
+  "homepage": "https://github.com/romainleduc/react-media-control#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7",
+    "@material-ui/core": "^4.11.1",
+    "@material-ui/icons": "^4.9.1",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.1.2",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
