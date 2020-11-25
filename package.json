@@ -10,7 +10,8 @@
     "video"
   ],
   "description": "",
-  "main": "index.ts",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "webpack": "webpack",
     "dev": "npm run webpack -- --mode development --watch",

@@ -27,13 +27,21 @@ const PlayPauseButton = forwardRef<
     ref
   ): JSX.Element => {
     const { media } = useContext(MediaContext) || {};
-    const [playing, setPlaying] = useState(!media?.paused || false);
+    const [playing, setPlaying] = useState(media?.autoplay);
 
     useEffect(() => {
       if (media) {
         onChangePlaying?.(!media.paused);
       }
     }, [playing]);
+
+    const getIcon = () => {
+      if (!media || playing) {
+        return pauseIcon;
+      } else {
+        return playIcon;
+      }
+    }
 
     const handleClick = () => {
       if (media) {
@@ -54,8 +62,7 @@ const PlayPauseButton = forwardRef<
         onClick={handleClick}
         {...other}
       >
-        {playing && pauseIcon}
-        {!playing && playIcon}
+        {getIcon()}
       </IconButton>
     );
   }
